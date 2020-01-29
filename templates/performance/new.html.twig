@@ -1,0 +1,10 @@
+{% extends 'backoffice.layout.html.twig' %}
+
+{% block title %}New Performance{% endblock %}
+
+{% block body %}
+    <h5 class="text-center my-3">Ajouter une nouvelle performance</h5>
+    {{ include('performance/_form.html.twig') }}
+
+    <a href="{{ path('performance_index') }}"> <button class="btn btn-primary">Retour à la liste</button></a>
+{% endblock %}

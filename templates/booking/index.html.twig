@@ -1,0 +1,51 @@
+{% extends 'backoffice.layout.html.twig' %}
+
+
+{% block title %}Booking index{% endblock %}
+
+{% block body %}
+    <h1 class="text-center my-3">Liste des réservations</h1>
+        <div class="row justify-content-center">
+            <div class="card col-7">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Prénom</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Ville</th>
+                            <th scope="col">Tarif réduit</th>
+                            <th scope="col">Plein tarif</th>
+                            <th scope="col">actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for booking in bookings %}
+                        <tr>
+                            <td>{{ booking.id }}</td>
+                            <td>{{ booking.Firstname }}</td>
+                            <td>{{ booking.Lastname }}</td>
+                            <td>{{ booking.Date ? booking.Date|date('Y-m-d') : '' }}</td>
+                            <td>{{ booking.City }}</td>
+                            <td>{{ booking.ReducedTickets }}</td>
+                            <td>{{ booking.FullPrice }}</td>
+                            <td>
+                                <a href="{{ path('booking_show', {'id': booking.id}) }}">voir</a>
+                                <a href="{{ path('booking_edit', {'id': booking.id}) }}">modifier</a>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="8">no records found</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <div class="row justify-content-center">
+        <a href="{{ path('booking_new') }}"> <button class="btn btn-primary my-3">Ajouter une nouvelle réservation</button></a>
+    </div>
+
+{% endblock %}

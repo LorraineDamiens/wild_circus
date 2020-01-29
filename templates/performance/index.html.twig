@@ -1,0 +1,43 @@
+{% extends 'backoffice.layout.html.twig' %}
+
+{% block title %}Performance index{% endblock %}
+
+{% block body %}
+    <h1 class="text-center my-3">Liste des performances</h1>
+        <div class="row justify-content-center">
+            <div class="card col-7">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for performance in performances %}
+                        <tr>
+                            <td>{{ performance.id }}</td>
+                            <td>{{ performance.Name }}</td>
+                            <td>{{ performance.Description }}</td>
+                            <td>
+                                <a href="{{ path('performance_show', {'id': performance.id}) }}">voir</a>
+                                <a href="{{ path('performance_edit', {'id': performance.id}) }}">modifier</a>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="4">no records found</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+</div>
+<div class="row justify-content-center">
+    <a href="{{ path('performance_new') }}"> <button class="btn btn-primary my-3">Ajouter nouvelle performance</button></a>
+
+
+</div>
+{% endblock %}

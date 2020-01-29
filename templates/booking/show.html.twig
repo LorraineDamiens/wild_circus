@@ -1,0 +1,46 @@
+{% extends 'backoffice.layout.html.twig' %}
+
+{% block title %}Booking{% endblock %}
+
+{% block body %}
+    <h1>Réservations</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ booking.id }}</td>
+            </tr>
+            <tr>
+                <th>Prénom</th>
+                <td>{{ booking.Firstname }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ booking.Lastname }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ booking.Date ? booking.Date|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ booking.City }}</td>
+            </tr>
+            <tr>
+                <th>Tarif réduit</th>
+                <td>{{ booking.ReducedTickets }}</td>
+            </tr>
+            <tr>
+                <th>Tarif plein</th>
+                <td>{{ booking.FullPrice }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('booking_index') }}">Retour à la liste</a>
+
+    <a href="{{ path('booking_edit', {'id': booking.id}) }}">modifier</a>
+
+    {{ include('booking/_delete_form.html.twig') }}
+{% endblock %}

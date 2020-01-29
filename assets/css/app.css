@@ -1,0 +1,158 @@
+
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC");
+
+body{
+  font-family: "Amatic SC", cursive;
+  font-size: 20px;
+  background-color: #FAD884;
+
+}
+
+p
+{
+
+  background-color: #F7B20A;
+  font-size: 1em;
+  margin: 3em;
+  text-align: center;
+}
+.aboutp{
+  border-radius: 20px;
+  background-color: #F7B20A;
+  font-size: 2em;
+  margin: 3em;
+  text-align: center;
+}
+.navbar{
+  background-color: #F7B20A;
+
+
+}
+
+.nav-link{
+  font-size:2em;
+  font-weight: bold;
+
+
+}
+
+
+
+.carousel-item{
+  width: 640px;
+  height: 691px;
+}
+
+
+h1
+{
+  border-radius: 20px;
+  background-color: #F33910;
+  padding: 15px;
+  font-weight: bold;
+  color:#F7B20A;
+}
+h2
+{
+  border-radius: 20px;
+  background-color: #4D8E8C;
+
+}
+
+
+.perf
+{
+  text-align: center;
+  padding-top: 100px;
+}
+.about
+{
+  text-align: center;
+}
+
+.prices
+{
+  text-align: center;
+}
+.contact
+{
+  text-align: center;
+}
+
+.perf ul
+{
+  display: inline-flex;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-align: center;
+  justify-content: center !important;
+  align-items: center;
+
+}
+
+.prices table
+{
+  width: 900px;
+  margin: auto;
+}
+
+.prices table td
+{
+  padding: 10px;
+  text-align: center;
+}
+
+#tcontent{
+  width: 300px;
+  height: 200px;
+}
+
+.day {
+  background: #F7B20A;
+  font-size: 1,5em;
+}
+
+.people
+{ background:#F33910;
+  font-size: 1,5em;
+}
+
+.price
+{ background:#F9C215;
+  font-size: 1,5em;
+}
+
+form
+{
+  width: 900px;
+  margin: auto;
+  font-family: "Amatic SC", cursive;
+  font-size: 2em;
+}
+
+textarea
+{
+  width: 300px;
+  height: 100px;
+}
+input
+{
+  width:300px;
+  height: 15px;
+}
+
+
+footer
+{
+  text-align:center;
+  bottom:0;
+  width:100%;
+  display:inline-block;
+  vertical-align:top;
+
+}
+
+footer a:hover{
+  color:#4D8E8C;
+}
