@@ -6,7 +6,7 @@
     <h5 class="text-center my-3">Modifier une performance</h5>
     {{ include('performance/_form.html.twig', {'button_label': 'Modifier'}) }}
 
-    <a href="{{ path('performance_index') }}"> <button class="btn btn-primary">Retour à la liste</button></a>
+    <a href="{{ path('performance_index') }}"> <button class="btn" style="background-color: #eb9486">Retour à la liste</button></a>
 
     {{ include('performance/_delete_form.html.twig') }}
 {% endblock %}

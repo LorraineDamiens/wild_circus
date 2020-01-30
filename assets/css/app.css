@@ -38,7 +38,7 @@ p
 }
 
 .form-control{
-  width: auto;
+  width: 45%;
 }
 
 h1
@@ -48,12 +48,14 @@ h1
   padding: 15px;
   font-weight: bold;
   color:#F7B20A;
+  line-height: unset !important;
 }
 h2
 {
   border-radius: 20px;
   background-color: #4D8E8C;
   font-weight: bold;
+  line-height: unset !important;
 
 
 }
@@ -63,6 +65,7 @@ h3 {
   font-weight: bold;
   font-size: 2em;
   text-align: center !important;
+  line-height: unset !important;
 }
 .perf
 {

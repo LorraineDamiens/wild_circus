@@ -26,8 +26,6 @@ use Twig\Environment;
 class WildController extends AbstractController
 {
 
-
-
     /**
      * @Route("/", name="welcome", methods={"GET"})
      */
