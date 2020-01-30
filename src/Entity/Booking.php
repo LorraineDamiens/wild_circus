@@ -21,20 +21,33 @@ class Booking
      */
     private $Firstname;
 
+
     /**
      * @ORM\Column(type="string", length=255)
      */
     private $Lastname;
 
     /**
-     * @ORM\Column(type="date")
-     */
-    private $Date;
-
-    /**
      * @ORM\Column(type="string", length=255)
      */
-    private $City;
+    private $Email;
+
+    /**
+     * @return mixed
+     */
+    public function getEmail()
+    {
+        return $this->Email;
+    }
+
+    /**
+     * @param mixed $Email
+     */
+    public function setEmail($Email): void
+    {
+        $this->Email = $Email;
+    }
+
 
     /**
      * @ORM\Column(type="integer")
@@ -45,6 +58,12 @@ class Booking
      * @ORM\Column(type="integer")
      */
     private $FullPrice;
+
+    /**
+     * @ORM\OneToOne(targetEntity="App\Entity\Shows", mappedBy="Booking")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $shows;
 
     public function getId(): ?int
     {
@@ -75,30 +94,6 @@ class Booking
         return $this;
     }
 
-    public function getDate(): ?\DateTimeInterface
-    {
-        return $this->Date;
-    }
-
-    public function setDate(\DateTimeInterface $Date): self
-    {
-        $this->Date = $Date;
-
-        return $this;
-    }
-
-    public function getCity(): ?string
-    {
-        return $this->City;
-    }
-
-    public function setCity(string $City): self
-    {
-        $this->City = $City;
-
-        return $this;
-    }
-
     public function getReducedTickets(): ?int
     {
         return $this->ReducedTickets;
@@ -119,6 +114,18 @@ class Booking
     public function setFullPrice(int $FullPrice): self
     {
         $this->FullPrice = $FullPrice;
+
+        return $this;
+    }
+
+    public function getShows(): ?Shows
+    {
+        return $this->shows;
+    }
+
+    public function setShows(Shows $shows): self
+    {
+        $this->shows = $shows;
 
         return $this;
     }

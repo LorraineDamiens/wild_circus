@@ -1,30 +1,20 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<section id="perf">
-    <h1> <img src="https://i.ibb.co/D4HYqrd/perflogo.png" alt="perflogo" /></h1>
-    <!-- TODO: En utilisant du css place ces trois performances ("lough", "dream, "marvel at") sur la même ligne en enlevant le point généré par la balise "li". Attention, utilise bien le css pour aligner les éléments, tu ne dois pas enlever les balises "li"-->
-    <ul>
-        <!-- performance 1 -->
-        <li>
-            <h2>Laugh</h2>
-            <p>As an adult, come and discover our irresistible clowns, between practical jokes and pranks let yourself be carried away by their joy and fall back into childhood.</p>
-        </li>
-        <!-- performance 2 -->
-        <li>
+<section class="perf">
 
-            <h2>Dream</h2>
-            <p>Let yourself be carried away in a world where the real and the imaginary are one, in the company of our talented magicians, discover a wonderful world limited only by your imagination.</p>
-        </li>
-        <!-- performance 3 -->
+    <h1> PERFORMANCES</h1>
+<br>
+    {% for performance in performances %}
+<div class="row justify-content-center">
 
-        <li>
-            <h2>Marvel at</h2>
-            <p>Tame the untameable in the company of our tamers, between roar and razor-sharp claws, watch these fierce felines turn into sweet kittens.</p>
+            <h2 class="col-3">{{performance.name}}</h2>
+</div>
+    <div class="row justify-content-center">
+            <p class=" aboutp col-4">{{ performance.description }} </p>
+    </div>
+    {% endfor %}
 
-        </li>
-
-    </ul>
 
 
 </section>

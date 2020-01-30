@@ -2,29 +2,23 @@
 
 {% block body %}
 
-<section id="contact">
-    <h5><img src="https://i.ibb.co/thNK7yQ/contactlogo.png" alt="contactlogo"  /></h5>
-    <!-- TODO: Réalise un formulaire de contact avec les champs email et message plus un bouton pour envoyer le message. Pense bien à ajouter les labels pour les différents champs
-      Ce formulaire n'a pas besoin d'être fonctionnel, réalise juste la mise en forme.
-    -->
-    <form action="contactlist" method="post">
-        <div>
-            <label for="mail">e-mail :</label>
-            <br/>
-            <input type="email" id="mail" name="user_mail">
-        </div>
-        <div>
-            <label for="msg">Message :</label>
-            <br/>
-            <textarea id="msg" name="user_message"
-                      rows="5" cols="25">
-          </textarea>
-        </div>
-        <div class="button">
-            <button type="submit">Submit</button>
-        </div>
-    </form>
 
-</section>
+
+    <h1>CONTACT</h1>
+
+    <br>
+    <div class="row justify-content-center">
+
+
+        <h2 class="col-2">Envoyer un message</h2>
+    </div>
+    <br>
+    {{ include('front/_message_form.html.twig') }}
+
+    <br>
+    <br>
+    <br>
+
+
 
 {% endblock %}

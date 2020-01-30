@@ -49,6 +49,7 @@ class BookingController extends AbstractController
         ]);
     }
 
+
     /**
      * @Route("/{id}", name="booking_show", methods={"GET"})
      */

@@ -5,17 +5,18 @@
 
     <div class="prices">
 
-    <h4><img src="https://i.ibb.co/bm8nTLW/priceslogo.png" alt="priceslogo"/></h4>
-
+        <h1>TARIFS ET RESERVATION</h1>
+        <br>
+    <div class="row justify-content-center">
     <table>
 
         <thead>
         <tr>
             <th></th>
-            <th class="people">Adult</th>
-            <th class="people">Child (- 10yrs)</th>
-            <th class="people">Group (8 and +)</th>
-            <th class="people">School </th>
+            <th class="people">Plein tarif</th>
+            <th class="people">Tarif réduit enfant (- 10ans)</th>
+            <th class="people">Tarif réduit groupe(8 et +)</th>
+            <th class="people">Tarif réduit école </th>
         </tr>
 
         </thead>
@@ -23,26 +24,34 @@
         <tbody>
         <tr>
 
-            <td class="day">Week except wednesday</td>
-            <td class="price"> 25$</td>
-            <td class="price"> 15$ </td>
-            <td class="price"> 15$ </td>
-            <td class="price"> 10$ </td>
+            <td class="day">Toutes les séances (tarif en euros)</td>
+            <td class="price"> 25</td>
+            <td class="price"> 15 </td>
+            <td class="price"> 15 </td>
+            <td class="price"> 15 </td>
         </tr>
 
-        <tr>
 
-            <td class="day"> Week-ends & Wednesday</td>
-            <td class="price"> 35$</td>
-            <td class="price"> 20$</td>
-            <td class="price"> 20$</td>
-            <td class="price"> 15$</td>
-        </tr>
 
         </tbody>
 
     </table>
     </div>
+
+    </div>
+<br>
+    <div class="row justify-content-center">
+
+
+    <h2 class="col-3">Ajouter une nouvelle réservation</h2>
+    </div>
+    <br>
+        {{ include('front/_form.html.twig') }}
+
+
+    <br>
+    <br>
+    <br>
 
 
 {% endblock %}

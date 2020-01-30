@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <h2>Vous avez une nouvelle réservation</h2>
+
+    Récapitulatif de la réservation:
+
+    Nom: {{ lastname }}
+    <br>
+    Prénom: {{ firstname }}
+    <br>
+    Email: {{ email }}
+    <br>
+    Spectacle: {{ shows }}
+    <br>
+    Nombre de billets à tarif réduit: {{ reducedTickets }}
+    <br>
+    Nombre de billets à plein tarif: {{ fullPrice }}
+
+{% endblock %}

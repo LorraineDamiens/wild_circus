@@ -1,0 +1,13 @@
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+<div class="row justify-content-center ">
+    <div class="card front col-4">
+        <div class="card-body col-4">
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+            <button class="btn" style="background-color: #4D8E8C">{{ button_label|default('Envoyer le message') }}</button>
+{{ form_end(form) }}
+
+    </div>
+</div>
+
+</div>

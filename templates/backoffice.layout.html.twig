@@ -9,24 +9,33 @@
 
     {% endblock %}
 </head>
-<body>
+<body style="background-color: #8fc0a9">
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/admin">Gestion du site</a>
+    <nav class="navbar navbar-expand-lg navbar" style="background-color: #c8d5b9">
+        <a class="navbar-brand" style="color:black" href="/admin">Gestion du site</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="admin/performance/index">Performances <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" style="color:black" href="{{ path('performance_index') }}">Performances <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="admin/artist/index">Artistes</a>
+                    <a class="nav-link"style="color:black"  href="{{ path('artist_index') }}">Artistes</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" style="color:black" href="{{ path('booking_index') }}">Réservations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="admin/booking/index">Réservations</a>
+                    <a class="nav-link" style="color:black" href="{{ path('message_index') }}">Messages</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color:black" href="{{ path('shows_index') }}">Shows</a>
+                </li>
+
+
 
             </ul>
         </div>

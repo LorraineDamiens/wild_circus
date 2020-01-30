@@ -26,8 +26,8 @@
                             <td>{{ booking.id }}</td>
                             <td>{{ booking.Firstname }}</td>
                             <td>{{ booking.Lastname }}</td>
-                            <td>{{ booking.Date ? booking.Date|date('Y-m-d') : '' }}</td>
-                            <td>{{ booking.City }}</td>
+                            <td>{{ booking.Shows.Date ? booking.Shows.Date|date('Y-m-d') : '' }}</td>
+                            <td>{{ booking.Shows.City }}</td>
                             <td>{{ booking.ReducedTickets }}</td>
                             <td>{{ booking.FullPrice }}</td>
                             <td>
